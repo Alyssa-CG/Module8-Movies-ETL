@@ -21,9 +21,7 @@
 ## Assumptions
 
 Several assumptions are being made in automating this process, including the following:
-1. That the individual deploying the code in the future reads the comment at the beginning of the script providing SQL to 
-"DELETE FROM table_name;"
-before running the function to transform and load the new data.
+1. That the individual deploying the code in the future reads the comment at the beginning of the script providing SQL to "DELETE FROM table_name;" to clear the table data without deleting the table, before running the function to transform and load the new data.
 2. That all loaded data files will be saved in the same location and named the exact name as the previous iteration.
 3. That data sources will remain reasonably unchanged over future iterations or they make break the function.
 4. That data sources will retain the identical column headers in the future.
