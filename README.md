@@ -20,13 +20,12 @@
     
 ## Assumptions
 
-Several assumptions are being made in automating this process, includng the following:
+Several assumptions are being made in automating this process, including the following:
 1. That the individual deploying the code in the future reads the comment at the beginning of the script providing SQL to 
 "DELETE FROM table_name;"
 before running the function to transform and load the new data.
 2. That all loaded data files will be saved in the same location and named the exact name as the previous iteration.
-3. That data sources will remain reasonably unchanged over future iterations.
+3. That data sources will remain reasonably unchanged over future iterations or they make break the function.
 4. That data sources will retain the identical column headers in the future.
-5. That strange outliers such as the badly merged 2006 movie will likely not be caught by the function.
-6. That extreme changes in source formatting will break the function.
-7. That Kaggle will remain the source of more consistent and accurate information- the function is set to prioritise Kaggle data and use Wikipedia data if Kaggle data is missing for ALL duplicated columns.
+5. That the strange outlier such as the badly merged 2006 movie will be caught if present in future iterations, but other kinds of badly merged outlier data likely not be caught by the function.
+6. That Kaggle will remain the source of more consistent and accurate information- the function is set to prioritise Kaggle data and use Wikipedia data if Kaggle data is missing for ALL duplicated columns.
